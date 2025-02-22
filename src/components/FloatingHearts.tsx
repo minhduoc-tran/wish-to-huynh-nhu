@@ -135,17 +135,17 @@ export const LoveLetterPopup: React.FC<{ onClose: () => void }> = ({
 
         {/* Lá thư */}
         <motion.div
-          className='absolute w-72 h-36 bg-white border-4 border-dashed border-red-400 rounded-md p-4 shadow-lg flex flex-col items-center justify-center font-handwriting'
+          className='absolute max-w-[320px]  w-full h-36 bg-white border-4 border-dashed border-red-400 rounded-md p-4 shadow-lg flex flex-col items-center justify-center font-handwriting'
           initial={{ y: 60, opacity: 0 }}
           animate={{ y: -30, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <p className='text-red-500 text-lg font-bold'>
+          <p className='text-red-500  font-bold text-xl'>
             💌 Gửi lời chúc đến{' '}
             <span className='font-bold text-pink-600'>Huỳnh Như</span>
             💌
           </p>
-          <p className='text-gray-700 w-full block text-start'>
+          <p className='text-gray-700 w-full block text-start text-lg'>
             {message_1.split('').map((char, index) => (
               <motion.span
                 key={index}
@@ -157,7 +157,7 @@ export const LoveLetterPopup: React.FC<{ onClose: () => void }> = ({
               </motion.span>
             ))}
           </p>
-          <p className='text-gray-700 w-full block text-start'>
+          <p className='text-gray-700 w-full block text-start text-lg'>
             {message_2.split('').map((char, index) => (
               <motion.span
                 key={index}
@@ -169,7 +169,7 @@ export const LoveLetterPopup: React.FC<{ onClose: () => void }> = ({
               </motion.span>
             ))}
           </p>
-          <p className='text-gray-700 w-full block text-end'>
+          <p className='text-gray-700 w-full block text-end text-lg'>
             {message_3.split('').map((char, index) => (
               <motion.span
                 key={index}
